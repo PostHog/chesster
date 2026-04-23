@@ -269,6 +269,28 @@ export const products: Product[] = [
       "Gift box included",
     ],
   },
+  {
+    id: "posthog-hedgehog-set",
+    name: "PostHog Hedgehog Collector's Set",
+    price: 219,
+    description:
+      "Limited-edition Staunton set with hedgehog-carved knights, co-designed with PostHog.",
+    longDescription:
+      "A playful collaboration with the team at PostHog. This tournament-weight set keeps the classic Staunton silhouette for every piece — except the knights, which have been reimagined as PostHog's signature hedgehog mascot, hand-carved in boxwood. Pieces are triple-weighted with billiard cloth bases, and the set ships in an orange felt-lined case stamped with the PostHog wordmark. A portion of proceeds supports open-source chess software.",
+    category: "sets",
+    images: ["/products/posthog-hedgehog.jpg"],
+    badge: "New",
+    rating: 4.8,
+    reviewCount: 42,
+    inStock: true,
+    features: [
+      "Hedgehog-carved knights",
+      "Triple-weighted boxwood pieces",
+      "3.75\" king height",
+      "Orange felt-lined case",
+      "PostHog wordmark embossing",
+    ],
+  },
 ];
 
 export function getProduct(id: string): Product | undefined {
