@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { products, getProduct, formatPrice } from "@/lib/products";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 
 export function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -122,16 +123,7 @@ export default async function ProductPage({
           </div>
 
           <div className="flex gap-4">
-            <button
-              disabled={!product.inStock}
-              className={`flex-1 py-3 rounded-md font-medium text-sm transition-colors ${
-                product.inStock
-                  ? "bg-accent text-white hover:bg-accent-dark"
-                  : "bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-800 dark:text-gray-600"
-              }`}
-            >
-              {product.inStock ? "Add to Cart" : "Sold Out"}
-            </button>
+            <AddToCartButton product={product} />
             <button className="px-4 py-3 border border-border rounded-md text-sm text-muted hover:text-foreground hover:border-foreground transition-colors">
               ♡ Wishlist
             </button>
